@@ -2,12 +2,18 @@ package com.mars.marsroverapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootTest
 class MarsRoverApiApplicationTests {
 
     @Test
-    void contextLoads() {
+    public void shouldReturnNasaApiJson() {
+        RestTemplate returnApi = new RestTemplate();
+
+       ResponseEntity<String> response = returnApi.getForEntity("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY", String.class);
+        System.out.println(response.getBody());
     }
 
 }
