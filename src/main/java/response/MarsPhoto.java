@@ -8,6 +8,25 @@ public class MarsPhoto {
     private MarsCamera camera;
     @JsonProperty("img_src")
     private String imgSrc;
+    @JsonProperty("earth_date")
+    private String earthDate;
+    private MarsRover rover;
+
+    public String getEarthDate() {
+        return earthDate;
+    }
+
+    public void setEarthDate(String earthDate) {
+        this.earthDate = earthDate;
+    }
+
+    public MarsRover getRover() {
+        return rover;
+    }
+
+    public void setRover(MarsRover rover) {
+        this.rover = rover;
+    }
 
     public Long getId() {
         return id;
