@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
+import response.MarsRoverApiResponse;
 
 @SpringBootTest
 class MarsRoverApiApplicationTests {
@@ -12,7 +13,7 @@ class MarsRoverApiApplicationTests {
     public void shouldReturnNasaApiJson() {
         RestTemplate returnApi = new RestTemplate();
 
-       ResponseEntity<String> response = returnApi.getForEntity("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY", String.class);
+       ResponseEntity<MarsRoverApiResponse> response = returnApi.getForEntity("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY", MarsRoverApiResponse.class);
         System.out.println(response.getBody());
     }
 

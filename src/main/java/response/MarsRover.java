@@ -8,9 +8,21 @@ public class MarsRover {
     private Long id;
     String name;
     @JsonProperty("landing_date")
-    private Date landingDate;
+    private String landingDate;
+    @JsonProperty("launch_date")
+    private String launchDate;
 
+    public void setLandingDate(String landingDate) {
+        this.landingDate = landingDate;
+    }
 
+    public String getLaunchDate() {
+        return launchDate;
+    }
+
+    public void setLaunchDate(String launchDate) {
+        this.launchDate = launchDate;
+    }
 
     public Long getId() {
         return id;
@@ -28,13 +40,6 @@ public class MarsRover {
         this.name = name;
     }
 
-    public Date getLandingDate() {
-        return landingDate;
-    }
-
-    public void setLandingDate(Date landingDate) {
-        this.landingDate = landingDate;
-    }
 
     @Override
     public String toString() {
