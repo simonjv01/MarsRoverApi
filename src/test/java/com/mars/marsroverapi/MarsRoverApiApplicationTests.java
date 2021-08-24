@@ -11,10 +11,7 @@ class MarsRoverApiApplicationTests {
 
     @Test
     public void shouldReturnNasaApiJson() {
-        RestTemplate returnApi = new RestTemplate();
 
-       ResponseEntity<MarsRoverApiResponse> response = returnApi.getForEntity("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY", MarsRoverApiResponse.class);
-        System.out.println(response.getBody());
     }
 
 }
