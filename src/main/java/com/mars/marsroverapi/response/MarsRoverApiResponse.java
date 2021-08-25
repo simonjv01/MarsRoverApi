@@ -1,4 +1,6 @@
-package response;
+package com.mars.marsroverapi.response;
+
+import com.mars.marsroverapi.response.MarsPhoto;
 
 import java.util.ArrayList;
 import java.util.List;

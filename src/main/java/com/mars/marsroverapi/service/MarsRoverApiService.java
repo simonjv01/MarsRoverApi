@@ -1,9 +1,9 @@
-package service;
+package com.mars.marsroverapi.service;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import response.MarsRoverApiResponse;
+import com.mars.marsroverapi.response.MarsRoverApiResponse;
 
 @Service
 public class MarsRoverApiService {

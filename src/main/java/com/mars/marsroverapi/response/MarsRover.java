@@ -1,4 +1,4 @@
-package response;
+package com.mars.marsroverapi.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
