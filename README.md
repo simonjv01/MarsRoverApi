@@ -1,1 +1,1 @@
-#Setup readme for notes
+#Setup readme for notes and setup
