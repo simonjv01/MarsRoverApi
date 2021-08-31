@@ -9,7 +9,9 @@
 <body>
     <div class="container">
     <h1>Welcome to the Mars Rover API Web App!</h1>
+
     <div  th:each="index : ${#numbers.sequence(0, roverData.photos.size(), 4)}" class="row" style="margin-bottom: 2em">
+
         <div class="col-sm">
             <img th:src="${roverData.photos[index].imgSrc}" class="img-fluid" alt=""/>
         </div>
@@ -24,7 +26,7 @@
         </div>
     </div>
 
-  <!--  <img th:each="photo : ${roverData.photos}" th:src="${photo.imgSrc}" /> -->
+
 
     </div>
 </body>
